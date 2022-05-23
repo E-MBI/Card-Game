@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Game</title>
+    <!-- main css file  -->
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- Rendring all element  -->
+    <link rel="stylesheet" href="css/all.min.css" />
+  </head>
+  <body>
+    <!-- Start Game  -->
+    <div class="cover">
+      <input type="button" value="Start Game" />
+    </div>
+    <!--  GameOver  -->
+    <div class="GameOver">
+      <!-- Winer -->
+      <div class="congrats">
+        <i class="fa-solid fa-star one"></i>
+        <i class="fa-solid fa-star two"></i>
+        <i class="fa-solid fa-star three"></i>
+        <i class="fa-solid fa-star four"></i>
+        <i class="fa-solid fa-star five"></i>
+        <i class="fa-solid fa-star six"></i>
+        <span>Greete Work</span>
+        <i class="fa-solid fa-face-grin-stars starFace"></i>
+      </div>
+      <!-- looser -->
+      <div class="failer">
+        <span>OoPsS! Try Again </span>
+        <i class="fa-solid fa-face-frown failerFace"></i>
+      </div>
+
+      <input type="button" value="New Game" />
+    </div>
+
+    <header>
+      <h1>Memory Card Game</h1>
+      <div class="headGame">
+        <span>Hello: <span class="playerName"></span></span>
+
+        <span>
+          Correct Tries:
+          <span class="Correct"> </span>
+          <span>/9</span>
+
+          <span class="time">
+            <i class="fa-solid fa-clock"></i>
+            <span class="count">60</span>
+          </span>
+        </span>
+
+        <span>Wrong Tries: <span class="Wrong"></span></span>
+      </div>
+    </header>
+
+    <section>
+      <div class="container">
+        <div class="gameblock" data-tech="javascript">
+          <div class="front face"></div>
+          <div class="face back">
+            <img src="imges/Js.png" />
+          </div>
+        </div>
+
+        <div class="gameblock" data-tech="javascript">
+          <div class="front face"></div>
+          <div class="face back">
+            <img src="imges/Js.png" />
+          </div>
+        </div>
+
+        <div class="gameblock" data-tech="angular">
+          <div class="front face"></div>
+          <div class="face back">
+            <img src="imges/Angular.png" />
+          </div>
+        </div>
+
+        <div class="gameblock" data-tech="angular">
+          <div class="front face"></div>
+          <div class="face back">
+            <img src="imges/Angular.png" />
+          </div>
+        </div>
+
+        <div class="gameblock" data-tech="jest">
+          <div class="front face"></div>
+          <div class="face back">
+            <img src="imges/Jest.jpg" />
+          </div>
+        </div>
+
+        <div class="gameblock" data-tech="jest">
+          <div class="front face"></div>
+          <div class="face back">
+            <img src="imges/Jest.jpg" />
+          </div>
+        </div>
+        <div class="gameblock" data-tech=" react">
+          <div class="front face"></div>
+          <div class="face back">
+            <img src="imges/React.png" />
+          </div>
+        </div>
+        <div class="gameblock" data-tech=" react">
+          <div class="front face"></div>
+          <div class="face back">
+            <img src="imges/React.png" />
+          </div>
+        </div>
+        <div class="gameblock" data-tech="githup">
+          <div class="front face"></div>
+          <div class="face back">
+            <img src="imges/Githup.png" />
+          </div>
+        </div>
+        <div class="gameblock" data-tech="githup">
+          <div class="front face"></div>
+          <div class="face back">
+            <img src="imges/Githup.png" />
+          </div>
+        </div>
+        <div class="gameblock" data-tech="python">
+          <div class="front face"></div>
+          <div class="face back">
+            <img src="imges/Python.png" />
+          </div>
+        </div>
+        <div class="gameblock" data-tech="python">
+          <div class="front face"></div>
+          <div class="face back">
+            <img src="imges/Python.png" />
+          </div>
+        </div>
+        <div class="gameblock" data-tech="swift">
+          <div class="front face"></div>
+          <div class="face back">
+            <img src="imges/Swift.png" />
+          </div>
+        </div>
+        <div class="gameblock" data-tech="swift">
+          <div class="front face"></div>
+          <div class="face back">
+            <img src="imges/Swift.png" />
+          </div>
+        </div>
+        <div class="gameblock" data-tech="kotlin">
+          <div class="front face"></div>
+          <div class="face back">
+            <img src="imges/Kotlin.png" />
+          </div>
+        </div>
+        <div class="gameblock" data-tech="kotlin">
+          <div class="front face"></div>
+          <div class="face back">
+            <img src="imges/Kotlin.png" />
+          </div>
+        </div>
+        <div class="gameblock" data-tech="mongoDB">
+          <div class="front face"></div>
+          <div class="face back">
+            <img src="imges/Mongo.jpg" />
+          </div>
+        </div>
+        <div class="gameblock" data-tech="mongoDB">
+          <div class="front face"></div>
+          <div class="face back">
+            <img src="imges/Mongo.jpg" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <audio class="Success" src="Audio/Success.mpeg" preload="auto"></audio>
+    <audio class="Failed" src="Audio/Failed.mpeg" preload="auto"></audio>
+    <audio class="Winner" src="Audio/Winner.mpeg" preload="auto"></audio>
+    <audio class="Losser" src="Audio/Punch.mpeg" preload="auto"></audio>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,308 @@
+*{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  outline-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+    font-family:sans-serif;
+}
+
+html{
+  font-size: 14px;
+  scroll-behavior: smooth;
+}
+
+
+:root{
+    --main-color:#1b6604;
+    --transition: all 0.5s;
+}
+
+
+h1{
+    padding: 15px;
+    margin: 16px auto;
+    width: fit-content;
+    color: #009688;
+}
+
+/* Global Rules  */
+.container{
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 1140px;
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 767px) {
+  .container {
+    padding: 0;
+    width: 520px;
+  }
+}
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 991px) {
+  .container {
+    width: 730px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 1199px) {
+  html {
+    font-size: 16px;
+  }
+  .container {
+    width: 950px;
+  }
+}
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .container {
+    width: 1140px;
+  }
+}
+/* Global Rules  */
+   /* Start Game   */
+.cover{
+    width: 100%;
+    height: 115vh;
+    background-color: #00968882;
+    position: absolute;
+    z-index: 5;
+}
+
+.cover>[type="button"]{
+    background-color: #f44336;
+    color: #fff;
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 45%;
+    transform: translate(50px, -50px);
+    outline: none;
+    border: none;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+/* GameOver */
+.GameOver{
+    width: 100%;
+    height: 115vh;
+    background-color: #3f403adb;
+    position: absolute;
+    z-index:-1;
+    opacity:0;
+    transition: var(--transition);
+}
+.GameOver .congrats{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+    height: 41vh;
+    width: 32vw;
+    margin: 114px auto;
+    position: relative;
+    flex-wrap: wrap;
+    border-radius: 24px;
+}
+.GameOver>.congrats>.one,.two,.three,.four,.five,.six{
+    width: fit-content;
+    margin: 5px;
+    font-size: 32px;
+    color: #ffc107;
+    position: absolute;
+}
+.GameOver>.congrats>.one{
+    top: 18px;
+}
+.GameOver>.congrats>.two{
+    top: 27%;
+    left: 51px;
+}
+.GameOver>.congrats>.three{
+    top: 27%;
+    right: 51px;
+}
+.GameOver>.congrats>.four{
+    bottom: 23%;
+    left: 59px;
+}
+.GameOver>.congrats>.five{
+    bottom: 25%;
+    right: 53px;
+}
+.GameOver>.congrats>.six{
+        bottom: 18px;
+}
+.GameOver>.congrats> span{
+    padding: 14px;
+    margin: 10px auto;
+    font-size: 25px;
+    font-weight: 700;
+    font-family: 'Font Awesome 5 Free';
+    letter-spacing: 1px;
+    color: #4caf50;
+}
+.GameOver>.congrats>.starFace{
+    width: fit-content;
+    font-size: 69px;
+    margin: 15px auto;
+    color: #e91e63;
+}
+.GameOver .failer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+    height: 43vh;
+    width: 32vw;
+    position: absolute;
+    top: 11%;
+    left: 34%;
+    border-radius: 24px;
+    z-index: 10;
+}
+.GameOver .failer span{
+        padding: 15px;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'Font Awesome 5 Free';
+    letter-spacing: 1px;
+    word-spacing: 4px;
+    color: #2196f3;
+}
+.GameOver>.failer>.failerFace{
+    margin: 25px auto;
+    font-size: 65px;
+    color: #ff460c;
+}
+
+.GameOver>[type="button"]{
+    background-color: #4caf50;
+    color: #fff;
+    display: block;
+    position: fixed;
+     top: 72%;
+    left: 42%;
+    transform: translate(50px, -50px);
+    outline: none;
+    border: none;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+header .headGame{
+    width: 70%;
+    padding: 20px;
+    margin: 20px auto;
+    font-size: 20px;
+    font-weight: 800;
+    border: 2px solid #00bcd4;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+} 
+header .headGame>span {
+    display: block;
+} 
+header .headGame>span >.playerName{
+    color: #2196f3;
+}
+header .headGame>span >.Wrong{
+    color: #ec0606;
+    font-size: 27px;
+    font-weight: 900;
+}
+header .headGame>span >.Correct{
+    color: #0fca63;
+    font-size: 27px;
+    font-weight: 900;
+}
+
+header .headGame>span >.time{
+    color: #e91e63;
+    font-size: 30px;
+    font-weight: 700;
+    margin: 24px;
+}
+
+header .headGame>span >span>.count{
+    color:#c6f321;
+    font-size: 27px;
+    font-weight: 900;
+}
+section .container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section .container>.gameblock{
+    margin: 10px;
+    width: 150px;
+    height: 20vh;
+    position: relative;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+section .container>.gameblock.no_clicking{
+    pointer-events: none;
+}
+
+section .container>.gameblock .front::before{
+    content: "?";
+    position: absolute;
+    top: 25%;
+    left: 37%;
+    font-size: 62px;
+    font-weight: 600;
+    color: #fff;
+
+}
+
+section .container>.gameblock .back{
+    transform: rotateY(180deg);
+}
+
+section .container>.gameblock>div{
+    border: 2px solid #2196f3;
+    margin: 6px auto;
+    padding: 20px;
+    background: #666;
+}
+
+section .container>.gameblock .face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+section .container>.gameblock>div>img{
+    width: 100px;
+    display: block;
+}
+
+
+section .container>.is_flipped,
+section .container>.is_matched{
+    transform: rotateY(180deg);
+    transition: var(--transition);
+
+}
+
