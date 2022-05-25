@@ -129,6 +129,7 @@ function GameOverWrongTries() {
   if (WrongTries.innerHTML === "15") {
     GameOver.style.zIndex = "10";
     GameOver.style.opacity = "1";
+    Congrats.style.opacity = "0";
     LosserSound.play();
   } else {
     return false;
@@ -144,11 +145,13 @@ function GameOverTime() {
     if (CorrectTries.innerHTML === `${GameBlocks.length / 2}`) {
       GameOver.style.zIndex = "10";
       GameOver.style.opacity = "1";
+      Failer.style.opacity = "0";
       Congrats.style.zIndex = "11";
       WinnerSound.play();
     } else {
       GameOver.style.zIndex = "10";
       GameOver.style.opacity = "1";
+      Congrats.style.opacity = "0";
       LosserSound.play();
     }
   } else {
